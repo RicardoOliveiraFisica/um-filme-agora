@@ -19,6 +19,7 @@ O assistente se chama **Pedro**, e foi criado para ouvir, compreender e sugerir 
 ## 🗂 Estrutura do projeto
 um-filme-agora/
 │
+
 ├── index.html # Página principal com o widget centralizado
 
 ├── manifest.json # Configuração PWA
