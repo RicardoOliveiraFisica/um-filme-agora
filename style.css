@@ -4,9 +4,10 @@ body {
   background-color: #0e0e0e;
   color: #f4f4f4;
   display: flex;
-  /*align-items: center;*/
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .app {
@@ -57,19 +58,43 @@ vapi-widget {
 
 @media (max-width: 450px) {
   vapi-widget {
-    height: 650px !important;
     transform: scale(0.95);
     transform-origin: top center;
     border-radius: 0;
     box-shadow: none;
+    height:515px !important;      
   }
 }
 
 @media (max-width: 400px) {
     vapi-widget {
       transform: scale(0.8);
-      transform-origin: top center;      
-      height:600px !important;      
+      transform-origin: top center;
+       height:515px !important;       
     }
   }
+
+/* Rodapé com versão */
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(14, 14, 14, 0.95);
+  border-top: 1px solid #333;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.app-footer #version {
+  color: #ffcc00;
+  font-weight: bold;
+}
 

@@ -45,6 +45,9 @@ um-filme-agora/
 2. **Crie o arquivo de configuração (scripts/config.js):**
 
     // scripts/config.js
+
+    window.APP_VERSION = "1.0.0";
+    
     window.VAPI_CONFIG = {
     PUBLIC_KEY: "sua-public-key-aqui",
     ASSISTANT_ID: "seu-assistant-id-aqui"

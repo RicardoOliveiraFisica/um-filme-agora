@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Preencher versão no rodapé
+  const versionElement = document.getElementById('version');
+  if (versionElement && window.APP_VERSION) {
+    versionElement.textContent = window.APP_VERSION;
+  }
+
   const { PUBLIC_KEY, ASSISTANT_ID } = window.VAPI_CONFIG;
 
   const widget = document.createElement("vapi-widget");
@@ -28,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const statusEl = document.getElementById('status');
-    window.addEventListener('vapiWidgetReady', () => {
-      statusEl.textContent = '🤖 Pedro está pronto para ajudar você a escolher um filme!';
-    });
+  window.addEventListener('vapiWidgetReady', () => {
+    statusEl.textContent = '🤖 Pedro está pronto para ajudar você a escolher um filme!';
+  });
 
-    // Registrar Service Worker (PWA)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('✅ Service Worker registrado'))
-        .catch(err => console.error('SW falhou:', err));
-    }
+  // Registrar Service Worker (PWA)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('✅ Service Worker registrado'))
+      .catch(err => console.error('SW falhou:', err));
+  }
 });
