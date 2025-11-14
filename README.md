@@ -19,15 +19,25 @@ O assistente se chama **Pedro**, e foi criado para ouvir, compreender e sugerir 
 ## 🗂 Estrutura do projeto
 um-filme-agora/
 │
+
 ├── index.html # Página principal com o widget centralizado
+
 ├── manifest.json # Configuração PWA
+
 ├── service-worker.js # Cache e offline
+
 ├── assets/
+
 │ └── icon-192.png # Ícone do app
+
 ├── scripts/
+
 │ ├── main.js # Monta o widget dinamicamente
+
 │ └── config.js # ⚠️ Armazena as chaves (não subir no Git)
+
 ├── .gitignore
+
 └── README.md
 
 
